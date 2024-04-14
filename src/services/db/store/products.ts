@@ -1,4 +1,4 @@
-import { Schema, model, connect } from "mongoose";
+import { Schema, model } from "mongoose";
 import { IProduct } from './types.js'
 
 const ProductSchema = new Schema<IProduct>({
@@ -8,6 +8,4 @@ const ProductSchema = new Schema<IProduct>({
     category: String
 });
   
-const Product = model('Product', ProductSchema);
-
-export { Product };
+export const Product = model('Product', ProductSchema);
